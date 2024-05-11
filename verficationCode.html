@@ -81,8 +81,15 @@
         console.log("uxlmnt");
 
         document.addEventListener("paste", (ev) => {
-
-        })
+            ev.preventDefault();
+            let myCopy = ev.clipboardData.getData("text");
+            myCopy = myCopy.toUpperCase();
+            inputs.forEach((input, value) => {
+                if (myCopy.length != inputs.length) return;
+                input.value = myCopy[value];
+            })
+            console.log(myCopy)
+        });
     </script>
 </body>
 
