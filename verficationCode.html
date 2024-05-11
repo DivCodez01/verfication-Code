@@ -70,7 +70,13 @@
     </div>
     <script>
         document.title = "V-Code";
-        const input = document.querySelectorAll("input");
+        const inputs = document.querySelectorAll("input");
+        inputs.forEach((input, value, array) => {
+            input.addEventListener("input", (ev) => {
+                ev.target.value = ev.target.value.toUpperCase();
+                array[value + 1]?.focus();
+            })
+        })
     </script>
 </body>
 
