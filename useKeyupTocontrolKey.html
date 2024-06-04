@@ -54,6 +54,19 @@
             padding: .2em;
             font-size: 1em;
         }
+
+        p {
+            line-height: 1.8em;
+            text-decoration: underline;
+        }
+
+        textarea {
+            resize: none;
+            padding: 1em .5em .5em 1em;
+            border: none;
+            outline: none;
+            background: var(--input-bck-color);
+        }
     </style>
 </head>
 
@@ -62,16 +75,17 @@
         <h1>Type and click Enter to switch to other input</h1>
         <main>
             <div>
-                Full names: <input type="text">
+                Full names: <input type="text" data-value="valued">
             </div>
             <div>
-                Educ background: <input type="text">
+                Educ background: <input type="text" data-value="valued">
             </div>
             <div>
-                Interested in: <input type="text">
+                Interested in: <input type="text" data-value="valued">
             </div>
             <div>
-                Introduce yourself: <textarea cols="" rows="20"></textarea>
+                <p>Introduce yourself: </p>
+                <textarea cols="56" rows="16" data-value="valued"></textarea>
             </div>
         </main>
     </form>
