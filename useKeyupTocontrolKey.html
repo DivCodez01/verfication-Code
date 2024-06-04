@@ -104,15 +104,17 @@
             //         arr[index + 1]?.focus();
             //     }
             // })
-            value.addEventListener("change", (ev) => {
-                arr[index + 1]?.focus();
-            });
+            // value.addEventListener("change", (ev) => {
+            //     arr[index + 1]?.focus();
+            // });
         });
 
         document.body.addEventListener("keydown", (ev) => {
             Array.from(valueds).forEach((value, index, arr) => {
-                if (index == 0) {
-                    value.focus();
+                if (ev.key == "Enter") {
+                    value.addEventListener("input", () => {
+                        arr[index + 1]?.focus();
+                    });
                 }
             });
         })
