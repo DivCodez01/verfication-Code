@@ -67,6 +67,11 @@
             outline: none;
             background: var(--input-bck-color);
         }
+
+        input:focus,
+        textarea:focus {
+            background: rgb(190, 190, 190);
+        }
     </style>
 </head>
 
@@ -94,12 +99,14 @@
         const valueds = document.querySelectorAll("[data-value]");
         Array.from(valueds).forEach((value, index, arr) => {
             // console.log(value);
-            value.addEventListener("keyup", (ev) => {
-                if (ev.key == "Enter") {
-                    arr[index + 1]?.focus();
-                }
-            })
-
+            // value.addEventListener("keyup", (ev) => {
+            //     if (ev.key == "Enter") {
+            //         arr[index + 1]?.focus();
+            //     }
+            // })
+            value.addEventListener("change", (ev) => {
+                arr[index + 1]?.focus();
+            });
         });
     </script>
 </body>
