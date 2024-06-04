@@ -108,6 +108,14 @@
                 arr[index + 1]?.focus();
             });
         });
+
+        document.body.addEventListener("keydown", (ev) => {
+            Array.from(valueds).forEach((value, index, arr) => {
+                if (index == 0) {
+                    value.focus();
+                }
+            });
+        })
     </script>
 </body>
 
