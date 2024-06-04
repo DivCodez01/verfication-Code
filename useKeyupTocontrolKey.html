@@ -17,6 +17,8 @@
             --auto-height: 100vh;
             --body-color: rgb(167, 167, 167);
             --text-family: Arial;
+            --auto-center: center;
+            --input-bck-color: rgb(150, 150, 150);
         }
 
         body {
@@ -24,6 +26,33 @@
             width: var(--auto-width);
             height: var(--auto-height);
             font-family: var(--text-family);
+            position: relative;
+        }
+
+        h1 {
+            text-align: var(--auto-center);
+            margin: 1em 0 1em 0;
+            background: white;
+            padding: .3em;
+            background: rgb(46, 46, 46);
+            color: white;
+        }
+
+        div {
+            position: relative;
+            left: 1em;
+            height: 1.9em;
+        }
+
+        input {
+            position: absolute;
+            left: 15em;
+            border: none;
+            outline: none;
+            background: var(--input-bck-color);
+            color: white;
+            padding: .2em;
+            font-size: 1em;
         }
     </style>
 </head>
@@ -33,13 +62,13 @@
         <h1>Type and click Enter to switch to other input</h1>
         <main>
             <div>
-                Full names: <input type="text" maxlength="1" autofocus>
+                Full names: <input type="text">
             </div>
             <div>
-                Education background: <input type="text" maxlength="1" autofocus>
+                Educ background: <input type="text">
             </div>
             <div>
-                Interested in: <input type="text" maxlength="1" autofocus>
+                Interested in: <input type="text">
             </div>
             <div>
                 Introduce yourself: <textarea cols="" rows="20"></textarea>
